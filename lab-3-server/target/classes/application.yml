@@ -4,6 +4,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/maneletorres/ConfigData
+          uri: https://github.com/maneletorres/Microservices-with-Spring-Cloud
+          search-paths: ConfigData
 server:
   port: 8001

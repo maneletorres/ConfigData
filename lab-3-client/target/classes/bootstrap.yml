@@ -4,5 +4,8 @@ spring:
     
   cloud:    config:      uri: http://localhost:8001
       
+  profiles:
+    active: northamerica
+      
 server:
   port: 8002
