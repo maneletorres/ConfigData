@@ -21,6 +21,7 @@
   	<module>lab-4-adjective</module>
   	<module>lab-4-noun</module>
   	<module>lab-4-sentence</module>
+  	<module>common-config-server</module>
   </modules>
   
 </project>
