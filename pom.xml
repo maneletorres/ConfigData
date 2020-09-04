@@ -24,6 +24,7 @@
   	<module>common-config-server</module>
   	<module>lab-5-word-server</module>
   	<module>lab-5-sentence-server</module>
+  	<module>lab-6-word-server</module>
   </modules>
   
 </project>
