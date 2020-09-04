@@ -22,6 +22,8 @@
   	<module>lab-4-noun</module>
   	<module>lab-4-sentence</module>
   	<module>common-config-server</module>
+  	<module>lab-5-word-server</module>
+  	<module>lab-5-sentence-server</module>
   </modules>
   
 </project>
