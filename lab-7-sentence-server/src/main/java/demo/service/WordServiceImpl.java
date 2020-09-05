@@ -21,6 +21,7 @@ public class WordServiceImpl implements WordService {
 	@Autowired NounClient nounClient;
 	
 	@Override
+	@HystrixCommand(fallbackMethod = "fallbackSubject")
 	public Word getSubject() {
 		return subjectClient.getWord();
 	}
@@ -36,17 +37,26 @@ public class WordServiceImpl implements WordService {
 	}
 	
 	@Override
-	@HystrixCommand(fallbackMethod = "newWord")
+	@HystrixCommand(fallbackMethod = "fallbackAdjective")
 	public Word getAdjective() {
 		return adjectiveClient.getWord();
 	}
 	
-	public Word newWord() {
+	@Override
+	@HystrixCommand(fallbackMethod = "fallbackNoun")
+	public Word getNoun() {
+		return nounClient.getWord();
+	}
+	
+	public Word fallbackSubject() {
+		return new Word("Someone");
+	}
+	
+	public Word fallbackAdjective() {
 		return new Word("");
 	}
 	
-	@Override
-	public Word getNoun() {
-		return nounClient.getWord();
-	}	
+	public Word fallbackNoun() {
+		return new Word("something");
+	}
 }
