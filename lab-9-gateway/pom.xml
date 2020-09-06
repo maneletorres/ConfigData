@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>common-config-server</artifactId>
+	<artifactId>lab-9-gateway</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>common-config-server</name>
-	<description>Spring Cloud Config Server suitable for use with most course labs</description>
+	<name>lab-9-gateway</name>
+	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -39,21 +39,31 @@
     </dependencyManagement>
     
 	<dependencies>
+	
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
+        	<groupId>org.springframework.cloud</groupId>
+        	<artifactId>spring-cloud-config-client</artifactId>
+    	</dependency>
+    		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
+		
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+	    </dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<!-- Spring Team seems to have forgotten about this dependency, needed to run test: -->
-		<dependency>
-			<groupId>com.jcraft</groupId>
-			<artifactId>jsch</artifactId>
 		</dependency>
 
 		<!-- Allow for automatic restarts when classpath contents change. -->
@@ -62,7 +72,6 @@
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 	    </dependency>
-
 	</dependencies>
 	
 	<build>

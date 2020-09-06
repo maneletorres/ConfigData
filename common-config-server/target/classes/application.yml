@@ -5,6 +5,9 @@ spring:
       server:
         git:
           uri: https://github.com/kennyk65/Microservices-With-Spring-Student-Files
-          search-paths: ConfigData
+          searchPaths: ConfigData
+        # "native" is used when the native profile is active, for local tests with a classpath repo:
+        native:
+          searchLocations: classpath:offline-repository/
 server:
   port: 8001
