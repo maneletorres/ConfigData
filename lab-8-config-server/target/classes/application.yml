@@ -1,0 +1,15 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/maneletorres/Microservices-with-Spring-Cloud
+          search-paths: ConfigData
+
+# This controls which Actuator web endpoints are exposed.  
+# Ordinarily, only /actuator/health and /actuator/info are exposed, 
+# But we need to allow external parties to POST to /bus-refresh:           
+management:  endpoints:    web:      exposure:        include: bus-refresh
+server:
+  port: 8001

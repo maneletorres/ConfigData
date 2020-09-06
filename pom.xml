@@ -29,6 +29,8 @@
   	<module>lab-7-word-server</module>
   	<module>lab-7-sentence-server</module>
   	<module>lab-7-sentence-server-reactive</module>
+  	<module>lab-8-config-server</module>
+  	<module>lab-8-client</module>
   </modules>
   
 </project>
