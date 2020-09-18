@@ -33,6 +33,8 @@
   	<module>lab-8-client</module>
   	<module>lab-9-word-server</module>
   	<module>lab-9-gateway</module>
+  	<module>lab-10-config-server</module>
+  	<module>lab-10-client</module>
   </modules>
   
 </project>
